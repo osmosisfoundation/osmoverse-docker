@@ -10,11 +10,13 @@ RUN git clone https://github.com/stan-dev/cmdstan.git \
      &&  rm -r stan_2.14.0 \
      &&  mv stan stan_2.14.0 \
      &&  cd stan_2.14.0 \
-     &&  git checkout torsten-master \
+     &&  git checkout torsten-develop \
      &&  mkdir lib \
      &&  cd lib \
      &&  git clone https://github.com/charlesm93/math.git \
      &&  mv math stan_math_2.14.0 \
      &&  cd stan_math_2.14.0 \
-     &&  git checkout torsten-master 
-         
+     &&  git checkout torsten-develop 
+     
+ RUN cd /cmdstan \
+   && make build
