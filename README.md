@@ -48,3 +48,8 @@ docker build -t "metrumresearchgroup/mrgsolve:v0.7.10" .
 ### stop all containers
 
 `docker stop $(docker ps -a -q)`
+
+
+### get information about a container
+
+`docker inspect <container_id>` - returns json with information about the container
